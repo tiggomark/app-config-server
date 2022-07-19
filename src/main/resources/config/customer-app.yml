@@ -1,0 +1,22 @@
+
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/customer_app}
+    username: ${SPRING_DATASOURCE_USER:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:leghacy150991}
+    tomcat:
+      max-wait: 200000
+      max-active: 50
+      max-idle: 20
+      min-idle: 15
+    jpa:
+      show-sql: false
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+          format_sql: true
+          id:
+            new_generator_mappings: true
