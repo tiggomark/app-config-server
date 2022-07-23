@@ -6,8 +6,6 @@ management:
 
 
 eureka:
-  instance:
-    hostname: eureka-server-app
   client:
     fetchRegistry: true
     serviceUrl:
