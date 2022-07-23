@@ -21,21 +21,22 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD:leghacy150991}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-    tomcat:
-      max-wait: 200000
-      max-active: 50
-      max-idle: 20
-      min-idle: 15
-    jpa:
-      show-sql: false
+  tomcat:
+    max-wait: 200000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
       hibernate:
-        ddl-auto: update
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-          format_sql: true
-          id:
-            new_generator_mappings: true
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+        id:
+          new_generator_mappings: true
 
 
 
