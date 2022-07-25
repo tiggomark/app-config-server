@@ -25,7 +25,7 @@ node {
 
     stage(name: 'Build docker image') {
         echo 'Build docker image and push to registry'
-           withCredentials([usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+           withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
               sh "docker login -u ${USERNAME} -p ${PASSWORD}"
 
             pomVersion = getVersion()
