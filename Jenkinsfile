@@ -26,8 +26,7 @@ node {
     stage(name: 'Build docker image') {
         echo 'Build docker image and push to registry'
            withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-              sh "docker login -u $USERNAME -p $PASSWORD"
-
+            sh "docker login -u $USERNAME -p $PASSWORD"
             pomVersion = getVersion()
             if(environment == "qa") {
                 sh "docker build -f ./Dockerfile --build-arg VERSION=$pomVersion --build-arg APP=$PROJECT_NAME -t ${repositoryUrl}/$PROJECT_NAME:$tagVersion ."
