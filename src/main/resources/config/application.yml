@@ -18,7 +18,9 @@ spring:
     username: ${SPRING_DATASOURCE_USER:root}
     password: ${SPRING_DATASOURCE_PASSWORD:leghacy150991}
     datasource:
-        initialization-mode: always
+      max-active: 10
+      initialization-mode: always
+
 
 
   jpa:
