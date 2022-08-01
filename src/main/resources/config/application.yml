@@ -17,9 +17,13 @@ spring:
     url: jdbc:postgresql://database-app:5432/customer_app
     username: ${SPRING_DATASOURCE_USER:root}
     password: ${SPRING_DATASOURCE_PASSWORD:leghacy150991}
-    datasource:
-      max-active: 10
-      initialization-mode: always
+    tomcat:
+      initial-size: 50
+      max-wait: 20000
+      max-active: 200
+      max-idle: 100
+      min-idle: 50
+      default-auto-commit: true
 
 
 
