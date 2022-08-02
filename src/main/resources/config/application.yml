@@ -14,7 +14,7 @@ eureka:
 
 spring:
   datasource:
-    url: jdbc:postgresql://ip-172-31-19-92.ec2.internal/customer_app
+    url: jdbc:postgresql://ip-172-31-19-92.ec2.internal:5432/customer_app
     username: ${SPRING_DATASOURCE_USER:root}
     password: ${SPRING_DATASOURCE_PASSWORD:leghacy150991}
     tomcat:
